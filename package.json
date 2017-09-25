@@ -1,0 +1,17 @@
+{
+  "name": "store-event",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lea Foreman",
+  "license": "MIT",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "dotenv": "^4.0.0",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31"
+  }
+}
