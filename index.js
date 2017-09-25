@@ -49,7 +49,7 @@ exports.handler = (event, context, callback) => {
 
       var params = {
         Message: `Brenda has taken her tablets at ${DATETIME}.`,
-        TopicArn: "arn:aws:sns:eu-west-1:125446380184:Pill_Box"
+        TopicArn: process.env.SNS_TOPIC_ARN
       };
 
       console.log("Publishing SNS");      
