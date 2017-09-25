@@ -18,7 +18,7 @@ require('dotenv').config();
 
 const AWS = require('aws-sdk');
 const SNS = new AWS.SNS({ apiVersion: '2010-03-31' });
-const moment = require('moment');
+const moment = require('moment-timezone');
 
 var MongoClient = require('mongodb').MongoClient
 , assert = require('assert');
@@ -45,10 +45,10 @@ exports.handler = (event, context, callback) => {
 
       const payload = JSON.stringify(event);
       
-      const DATETIME = moment().format('MMMM Do YYYY, h:mm:ss a');
+      const DATETIME = moment().tz("Europe/London").format('MMMM Do YYYY, h:mm:ss a');
 
       var params = {
-        Message: `Brenda has taken her tablets at ${DATETIME}.`,
+        Message: `Brenda has taken her tablets on ${DATETIME}.`,
         TopicArn: process.env.SNS_TOPIC_ARN
       };
 

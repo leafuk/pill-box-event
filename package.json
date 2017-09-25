@@ -12,6 +12,7 @@
     "assert": "^1.4.1",
     "dotenv": "^4.0.0",
     "moment": "^2.18.1",
+    "moment-timezone": "^0.5.13",
     "mongodb": "^2.2.31"
   }
 }
